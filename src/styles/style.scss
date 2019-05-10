@@ -1,0 +1,39 @@
+
+
+.info {
+    width: 95%;
+    height: 2%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.info ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+
+    animation: cambio 7s infinite alternate linear;
+}
+
+.info li {
+    width: 100%;
+    list-style: none;
+}
+
+.info img {
+    width: 100%;
+}
+
+@keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    50% {margin-left: -100%;}
+    70% {margin-left: -100%;}
+
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+}
