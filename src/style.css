@@ -31,17 +31,40 @@
   grid-gap: 50px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  grid-template-areas: "widget-7 widget-8 widget-9 widget-10 widget-11"
-                    
-                        
-                        
+  grid-template-areas: "widget-7 widget-8 widget-9 widget-10 widget-11"  
+                                      
                         
 }
+
 p {
     font-family: 'Roboto',sans-serif;
 }
+
 h5 {
   font-family: Lato;
+}
+option {
+  color: rgba(0, 0, 0, 0.397)
+}
+.footer{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.ri{
+  width: 60px; height: 35px;
+}
+.seguro{
+  display: inline-block;
+  flex: 1;
+}
+.redes {
+  display: inline-block;
+
+}
+.cont {
+  width: 40px; height: 40px;
+
 }
 .contenedor > div,
 .contenedor .header{
@@ -141,7 +164,7 @@ h5 {
   grid-area: widget-11;
 }
 
-.img {
+.imgs {
     width: 300px; height: 300px;
     display: block;
 }
