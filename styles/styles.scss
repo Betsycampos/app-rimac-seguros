@@ -1,0 +1,132 @@
+$rojorimac: #ef3340;
+
+@mixin flexCenter {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin widgetColSize {
+	background: #55a8fd;
+	color: #fff;
+	height: 100px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+body {
+	color: rgb(73, 79, 102);
+	
+}
+.info p{
+	padding: 17px 40px;
+	font-size: 18px;
+	line-height: 32px;	
+}
+.button {
+	background-color: $rojorimac; /* Green */
+	border: none;
+	color: white;
+	padding: 17px 40px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 8px;
+	height: 56px;
+  }
+.button-line {
+	background-color: white; 
+	color: $rojorimac; 
+	border: 1px solid $rojorimac;
+	&:hover{
+		background-color: $rojorimac;
+		color: white
+	}
+  }
+.h1{
+	padding: 17px 4px;
+	font-size: 56px;
+	line-height: 68px;
+	letter-spacing: -0.6px;
+	
+}
+.title-flex-red{
+	color: $rojorimac; 
+	padding: 0;
+	font-weight: bold;
+}
+img{
+	width: 100%;
+	max-height: none;
+	max-width: 400px;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(3, auto);
+
+	grid-template-areas: "header header header header header header"
+						 "info info info info info info"
+						 "footer footer footer footer footer footer";
+						
+
+	 
+}
+	
+	
+	.header {
+	background: #12203E;
+	@include flexCenter();
+	color: rgb(251, 255, 7);
+	grid-area: header;
+	}
+
+	.info {
+		grid-area: info;
+		@include flexCenter();
+		
+	}
+
+
+	
+}
+
+
+	.contenedor .footer {
+	@include flexCenter();
+	background: #12203E;
+	color: #fff;
+	grid-area: footer;
+}
+
+@media screen and (max-width: 768px){
+	.contenedor {
+		grid-template-areas: "header header header header header header"
+						     "info info	 info info info	 info"
+						     "footer footer footer footer footer footer";
+	}
+}
+
+
+@media screen and (max-width: 468px){
+	.contenedor {
+		grid-template-areas: "header header header header header header"
+						 "info info	 info info info	 info"
+						
+						 "footer footer footer footer footer footer";
+	}
+}
