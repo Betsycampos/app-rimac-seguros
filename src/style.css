@@ -20,14 +20,28 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
     grid-template-areas: "widget-4 widget-5"
-                      "widget-4 widget-6"
-                          
-                          
-                          
+                         "widget-4 widget-6"                   
+}
+
+.container1 {
+  width: 90%;
+  max-width: 1000px;
+  margin: 80px auto;
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: "widget-7 widget-8 widget-9 widget-10 widget-11"
+                    
+                        
+                        
+                        
 }
 p {
     font-family: 'Roboto',sans-serif;
-
+}
+h5 {
+  font-family: Lato;
 }
 .contenedor > div,
 .contenedor .header{
@@ -69,6 +83,17 @@ p {
     display: inline-block;
     font-size: 40px;
 }
+
+.container1 .blank {
+  color: rgba(0, 0, 0, 0.555);
+  display: inline-block;
+  font-size: 30px;
+}
+.container1 .red {
+  color: #ff0000;
+  display: inline-block;
+  font-size: 30px;
+}
 .contenedor .widget-1,
 .contenedor .widget-2,
 .contenedor .widget-3 {
@@ -92,8 +117,6 @@ p {
 
 .container .widget-4 {
     grid-area: widget-4;
-    
-    /* background-image: 2px; */
 }
 .container .widget-5 {
     grid-area: widget-5;
@@ -101,9 +124,29 @@ p {
 .container .widget-6 {
     grid-area: widget-6;
 }
+
+.container1 .widget-7 {
+  grid-area: widget-7;
+}
+.container1 .widget-8 {
+  grid-area: widget-8;
+}
+.container1 .widget-9 {
+  grid-area: widget-9;
+}
+.container1 .widget-10 {
+  grid-area: widget-10;
+}
+.container1 .widget-11 {
+  grid-area: widget-11;
+}
+
 .img {
     width: 300px; height: 300px;
     display: block;
+}
+.img1 {
+  width: 200px; height: 200px;
 }
 
 @media screen and (max-width:768px){
@@ -117,9 +160,21 @@ p {
 }
 
 @media screen and (max-width:768px) {
-    .container {
+  .container {
         grid-template-areas: "widget-4"
                              "widget-5"
                              "widget-6"
     }
+}
+
+@media screen and (max-width:768px) {
+  .container1 {
+    grid-template-areas: "widget-7"
+                         "widget-8"
+                         "widget-9"
+                         "widget-10"
+                         "widget-11"
+
+  }
+ 
 }
